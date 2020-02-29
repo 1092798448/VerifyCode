@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+	
+<struts-config>
+	<action-mappings>
+		<action path="/login" type="com.example.action.LoginAction" parameter="method">
+			<forward name="loginSuccess" path="/loginSuccessed.jsp" /> 
+			<forward name="loginFail" path="/loginFailed.jsp" />
+			<forward name="result" path="/result.jsp" />
+			<forward name="index" path="/index.jsp"/>
+		</action>
+		
+		<action path="/verify" type="com.example.action.VerifyCodeAction" parameter="method">
+		</action>
+	</action-mappings>
+</struts-config>
